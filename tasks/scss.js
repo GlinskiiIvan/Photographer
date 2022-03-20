@@ -31,7 +31,7 @@ const scss = () => {
     .pipe(sass())
     .pipe(webpCss())
     .pipe(autoprefixer())
-    .pipe(shorthand())
+    // .pipe(shorthand())
     .pipe(groupCssMediaQueries())
     .pipe(size({ title: "main.scss:" }))
     .pipe(dest(path.scss.dest, { sourcemaps: isDev }))

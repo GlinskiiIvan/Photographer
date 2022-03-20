@@ -1,0 +1,114 @@
+.banner {
+    position: relative;
+    padding: 268px 0 228px 0;
+    height: 100vh;
+    background-color: $dark;
+    background-image: 
+        url('../img/banner_bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    &__content {
+        max-width: 100%;
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+    }
+    &__prof {
+        max-width: 470px;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 10px;
+    }
+    &__name {
+        max-width: 470px;
+        font-weight: 700;
+        font-size: 64px;
+        color: $white;
+        margin-bottom: 25px;
+    }
+    &__line {
+        max-width: 470px;
+        height: 1px;
+        background-color: $white;
+        margin-bottom: 25px;
+    }
+    &__desc {
+        max-width: 470px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: $white;
+        margin-bottom: 25px;
+    }
+    &__btn {
+        max-width: 470px;
+        width: max-content;
+        position: relative;
+        font-weight: 700;
+        font-size: 32px;
+        letter-spacing: 0.05em;
+        color: $acent;
+        background-color: transparent;
+        border: 2px solid $acent;
+        padding: 0.3125em 1.71875em;
+        outline: none;
+        cursor: pointer;
+        transition: all .2s linear;
+    }
+    &__arrow-down-link {
+        display: block;
+        position: absolute;
+        width: -webkit-fill-available;
+        left: 0;
+        bottom: -25px;   
+        transform: translateY(100%);     
+    }
+    &__arrow-down {
+        max-width: 35px;
+    }
+    &__socials--wrapper {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__socials {
+        margin: 25px 0;
+        &--item {
+            margin: 12.5px 0;
+            &:first-child, 
+            &:last-child {
+                margin: 0;
+            }
+        }
+        &--link {
+            padding: 0.83333333333em;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $white;
+            color: $dark;
+            font-size: 30px;
+            position: relative;
+            &::before {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &--verticle-line {
+            height: 160px;
+            width: 1px;
+            display: block;
+            background-color: $white;
+        }
+    }
+}
