@@ -73,7 +73,7 @@
     }
     &__socials--wrapper {
         position: absolute;
-        right: 30px;
+        right: 40px;
         top: 50%;
         transform: translateY(-50%);
         display: flex;
@@ -105,7 +105,7 @@
             }
         }
         &--verticle-line {
-            height: 160px;
+            height: 19.75vh;
             width: 1px;
             display: block;
             background-color: $white;

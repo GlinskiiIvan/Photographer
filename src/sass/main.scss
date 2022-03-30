@@ -1,37 +1,9 @@
 @import "vars";
 @import "fonts";
 @import "icons";
+@import "mixins-media";
+@import "mixins-adaptive";
 
-@mixin LaptopL-1440 {
-    @media(max-width: 1440px){
-        @content;
-    }
-}
-@mixin Laptop-1024 {
-    @media(max-width: 1024px){
-        @content;
-    }
-}
-@mixin Tablet-768 {
-    @media(max-width: 768px){
-        @content;
-    }
-}
-@mixin MobileL-425 {
-    @media(max-width: 425px){
-        @content;
-    }
-}
-@mixin MobileM-375 {
-    @media(max-width: 375px){
-        @content;
-    }
-}
-@mixin MobileS-320 {
-    @media(max-width: 320px){
-        @content;
-    }
-}
 
 * {
     box-sizing: border-box;
@@ -58,6 +30,30 @@ body {
     max-width: $container-max-width + px;
     margin: 0 auto;
     padding: 0 15px; 
+}
+
+.tel-icon {
+    background-color: $acent;
+    padding: 0.78125em;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    &::before {
+        position: absolute;
+        color: $dark;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }    
+}
+
+.tel {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: $acent;
 }
 
 @import "./blocks/*.scss";

@@ -1,6 +1,14 @@
 .header {
     background-color: $dark;
     padding: 20px 0;
+
+    display: flex;
+    align-items: center;
+
+    .container {
+        // margin-right: -50px;
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
@@ -16,27 +24,10 @@
         align-items: center;
     }
     &__tel-icon {
-        position: relative;
-        font-weight: 700;
-        font-size: 16px;
-        width: 1.5625em;
-        height: 1.5625em;
-        border-radius: 50%;
-        color: $dark;
-        background-color: $acent;
-        margin-right: 5px;
-        &::before {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
+
     }
     &__tel {
-        font-weight: 700;
-        font-size: 16px;
-        letter-spacing: 0.05em;
-        color: $acent;
+
     }
     &__lang {
         display: flex;

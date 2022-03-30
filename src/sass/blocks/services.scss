@@ -1,0 +1,50 @@
+.services {
+    padding: $section-padding;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 30%;
+        height: 2px;
+        left: 0;
+        top: 85px;
+        background-color: $acent;
+    }
+    &__content {
+
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: $dark;
+        margin-bottom: 40px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    &__item {
+        width: calc(25% - 80px);
+        margin: 0 40px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: $dark;
+        &--img {
+            max-width: 80px;
+            margin-bottom: 20px;            
+        }
+        &--title {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        &--desc {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}

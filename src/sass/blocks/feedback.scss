@@ -1,0 +1,45 @@
+.feedback {
+    padding: $section-padding;
+    background: url('../img/form_bg.png');
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;    
+    &__title {
+        font-weight: 700;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: $white;
+        margin-bottom: 25px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 570px;
+        margin: 0 auto;
+        &--input {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.05em;
+            color: rgba(0, 0, 0, 0.45);
+            margin-bottom: 15px;     
+            padding: 1.07em 1.428em;    
+            border: none;   
+            outline: none;     
+            cursor: pointer;       
+        }
+        &--btn {
+            border: none;   
+            outline: none;   
+            font-weight: 700;
+            font-size: 26px;
+            text-align: center;
+            letter-spacing: 0.05em;    
+            background-color: $acent;     
+            padding: 0.5769em;   
+            color: $white;
+            cursor: pointer;
+        }
+    }
+}
