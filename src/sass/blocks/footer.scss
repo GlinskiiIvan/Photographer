@@ -1,17 +1,30 @@
 .footer {
     padding: $section-padding;
     background-color: $dark;
+    @include MobileL-425 {
+        padding: $section-padding-mobile;
+    }
     &__content {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: -50px;
+        flex-wrap: wrap;
+        @include Tablet-520 {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
     &__logo {
-        width: 178px;
-        height: 46px;
+        @include adaptive-maxWidth(178, 140);
+        margin-bottom: 30px;
     }
     &__contacts {
-
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
         hr {
             height: 1px;
             border: none;
@@ -22,10 +35,12 @@
     }
     &__tel {
         margin-bottom: 10px;
+        font-size: 16px !important;
     }
     &__socials {
         display: flex;
         justify-content: space-between;
+        margin: 0 -10px;
         &--link {
             display: inline-block;
             position: relative;
@@ -34,6 +49,7 @@
             background-color: $white;
             color: $dark;
             font-size: 18px;
+            margin: 0 10px;
             &::before {
                 position: absolute;
                 top: 50%;
@@ -45,10 +61,14 @@
     &__arrow-up {
         width: 37px;
         height: 51px;
+        margin-bottom: 30px;
+        @include Tablet-520 {
+            display: none;
+        }
     }
     &__btn {
         font-weight: 700;
-        font-size: 32px;
+        @include adaptive-font(32, 20);
         letter-spacing: 0.05em;  
         color: $acent;      
         background-color: transparent;
@@ -56,5 +76,6 @@
         outline: none;
         padding: 0.34375em 1.75em;
         cursor: pointer;
+        margin-bottom: 30px;
     }
 }

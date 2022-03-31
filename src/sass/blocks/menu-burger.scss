@@ -2,16 +2,23 @@
 .menu-burger::after,
 .menu-burger::before {
     display: block;
-    height: 5px;
+    // height: 5px;
+    @include adaptive-height(5, 3);
     background-color: $white;
     cursor: pointer;
     transition: all .2s linear;
 }
 .menu-burger {
     position: relative;
-    width: 50px;
-    // margin-left: 50px;
+    // width: 50px;
+    @include adaptive-width(50, 30);
     margin-right: 40px;
+    @include Laptop-1300 {
+        margin-left: 5px;
+    }
+    @include MobileL-425 {
+        margin-right: 15px;
+    }
     &::after, 
     &::before {
         position: absolute;
@@ -21,8 +28,14 @@
     }
     &::before{
         top: -10px;
+        @include MobileL-425 {
+            top: -6px;
+        }
     }
     &::after{
         bottom: -10px;
+        @include MobileL-425 {
+        bottom: -6px;
+        }
     } 
 }

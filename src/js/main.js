@@ -15,13 +15,14 @@ $(document).ready(function(){
               breakpoint: 768,
               settings: {
                 slidesToShow: 2,
-                arrows: false
+                arrows: false,
               }
             },
             {
                 breakpoint: 425,
                 settings: {
-                  slidesToShow: 1
+                  slidesToShow: 1,
+                  arrows: false,  
                 }
               },
           ]

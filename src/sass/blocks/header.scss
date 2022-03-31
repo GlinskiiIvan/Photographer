@@ -16,6 +16,7 @@
     }
     &__logo {
         max-width: 178px;
+        @include adaptive-maxWidth(178, 98);
         fill: $white;
     }
     &__right {
@@ -34,10 +35,11 @@
         justify-content: space-between;
         align-items: center;
         margin-left: 50px;
+        @include adaptive-font(16, 12);        
         &--item {
-            margin: 0 15px;
+            margin: 0 0.9375em;
             font-weight: 400;
-            font-size: 16px;
+            // font-size: 16px;
             letter-spacing: 0.05em;
             color: $white;
             cursor: pointer;
@@ -49,6 +51,12 @@
             &:last-child {
                 margin: 0;
             }
+        }
+        @include Tablet-500 {
+            margin-left: 0.5em;
+        }
+        @include MobileL-425 {
+            display: none;
         }
     }
 }

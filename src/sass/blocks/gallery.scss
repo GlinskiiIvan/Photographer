@@ -2,6 +2,12 @@
     padding: 70px 60px;
     background-color: $dark;
     position: relative;
+    @include Tablet-768 {
+        padding: 70px 0;
+    }
+    @include MobileL-425 {
+        padding: 50px 0;
+    }
     &::after {
         position: absolute;
         content: '';
@@ -10,6 +16,10 @@
         right: 0;
         bottom: 97px;
         background-color: $acent;
+        @include MobileL-425 {
+            width: 40%;
+            bottom: 68px;
+        }
     }
     &__content {
 
@@ -44,6 +54,9 @@
                 transform: translateX(100%);
                 background: url(../img/arrow-next.svg);
             }
+            @include Tablet-768 {
+                display: none;
+            }
         }
         &--item {
             margin: 0 15px;
@@ -54,7 +67,8 @@
     }
     &__btn {
         font-weight: 700;
-        font-size: 25px;
+        // font-size: 25px;
+        @include adaptive-font(25, 16);
         letter-spacing: 0.05em; 
         color: $dark;       
         border: none;

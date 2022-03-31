@@ -1,8 +1,8 @@
-@import "vars";
-@import "fonts";
-@import "icons";
-@import "mixins-media";
-@import "mixins-adaptive";
+@import "components/vars";
+@import "components/fonts";
+@import "components/icons";
+@import "components/mixins-media";
+@import "components/mixins-adaptive";
 
 
 * {
@@ -30,30 +30,6 @@ body {
     max-width: $container-max-width + px;
     margin: 0 auto;
     padding: 0 15px; 
-}
-
-.tel-icon {
-    background-color: $acent;
-    padding: 0.78125em;
-    border-radius: 50%;
-    position: relative;
-    margin-right: 10px;
-    &::before {
-        position: absolute;
-        color: $dark;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }    
-}
-
-.tel {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: 0.05em;
-    color: $acent;
 }
 
 @import "./blocks/*.scss";

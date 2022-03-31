@@ -9,48 +9,71 @@
         background-position: center;
         background-size: cover;
     &__content {
-        max-width: 100%;
+        width: 40%;
         position: relative;
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;        
+        justify-content: center;   
+        @include Tablet-768 {
+            width: 60%;            
+        }     
+        @include MobileL-425 {
+            width: 70%;
+        }
     }
     &__prof {
-        max-width: 470px;
+        // max-width: 470px;
         font-weight: 400;
-        font-size: 20px;
+        // font-size: 20px;
+        @include adaptive-font(20, 12);
         text-transform: uppercase;
         color: $white;
-        margin-bottom: 10px;
+        margin-bottom: 0.5em;
+        @include containerWidth {
+            font-size: 20px;
+        }
     }
     &__name {
-        max-width: 470px;
+        width: max-content;
         font-weight: 700;
-        font-size: 64px;
+        // font-size: 64px;
+        @include adaptive-font(64, 24);
         color: $white;
-        margin-bottom: 25px;
+        margin-bottom: 0.390625em;
+        @include containerWidth {
+            font-size: 64px;
+        }
     }
     &__line {
-        max-width: 470px;
+        // max-width: 470px;
         height: 1px;
         background-color: $white;
-        margin-bottom: 25px;
+        @include adaptive-font(64, 24);
+        margin-bottom: 0.390625em;
     }
     &__desc {
-        max-width: 470px;
+        // max-width: 470px;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
+        // font-size: 16px;
+        @include adaptive-font(16, 8);
+        @include containerWidth {
+            font-size: 16px;
+        }
+        line-height: 1.25em;
         color: $white;
-        margin-bottom: 25px;
+        margin-bottom: 1.5625em;
     }
     &__btn {
-        max-width: 470px;
+        // max-width: 470px;
         width: max-content;
         position: relative;
         font-weight: 700;
-        font-size: 32px;
+        // font-size: 32px;
+        @include adaptive-font(32, 14);
+        @include containerWidth {
+            font-size: 32px;
+        }
         letter-spacing: 0.05em;
         color: $acent;
         background-color: transparent;
@@ -66,7 +89,10 @@
         width: -webkit-fill-available;
         left: 0;
         bottom: -25px;   
-        transform: translateY(100%);     
+        transform: translateY(100%);   
+        @include Tablet-768 {
+            display: none;
+        }          
     }
     &__arrow-down {
         max-width: 35px;
@@ -79,6 +105,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include MobileL-425 {
+            right: 20px;
+        }
     }
     &__socials {
         margin: 25px 0;
@@ -95,13 +124,17 @@
             border-radius: 50%;
             background-color: $white;
             color: $dark;
-            font-size: 30px;
+            // font-size: 30px;
+            @include adaptive-font(30, 12);
             position: relative;
             &::before {
                 position: absolute;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
+            }
+            @include containerWidth {
+                font-size: 30px;
             }
         }
         &--verticle-line {

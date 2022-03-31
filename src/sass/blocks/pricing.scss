@@ -2,9 +2,12 @@
     padding: $section-padding;
     background-color: $dark;
     position: relative;
+    @include MobileL-425 {
+        padding: $section-padding-mobile;
+    }
     &__title {
         font-weight: 700;
-        font-size: 25px;
+        @include adaptive-font(25, 20);
         text-align: center;
         letter-spacing: 0.05em;
         color: $white;
@@ -14,12 +17,32 @@
         display: flex;
         justify-content: center;
         align-items: initial;
+        flex-wrap: wrap;
+        @include Tablet-768 {
+            margin-bottom: -30px;
+        }
     }
     &__card {
         padding: 68px 93px;
         background-color: $white;
         width: calc((100% / 3 - 30px));
         margin: 0 15px;
+        @include Laptop-1300 {
+            padding: 30px 20px;
+        }        
+        @include Tablet-768 {
+            width: calc((50% - 30px));
+            margin-bottom: 30px;
+        }
+        @include Tablet-520 {
+            width: 60%;
+        }
+        @include MobileL-425 {
+            width: 70%;
+        }
+        @include MobileM-375 {
+            width: 80%;
+        }
         &--title, &--price {
             font-weight: 700;
             font-size: 25px;
@@ -66,7 +89,7 @@
         }
         &--btn {
             font-weight: 700;
-            font-size: 25px;
+            @include adaptive-font(25, 20);
             letter-spacing: 0.05em; 
             color: $acent;           
             outline: none;
@@ -74,6 +97,12 @@
             border: 2px solid $acent;
             padding: 0.6em 1em;
             cursor: pointer;
+            @include containerWidth {
+                font-size: 25px;
+            }
+            @include Laptop-1300 {
+                padding: 0.1em 1em;
+            }
         }
     }    
 }
@@ -86,4 +115,7 @@
     top: 86px;
     right: 0;
     border: none;
+    @include MobileL-425 {
+        top: 63px;
+    }
 }

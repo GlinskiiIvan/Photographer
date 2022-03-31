@@ -1,0 +1,24 @@
+.tel-icon {
+    background-color: $acent;
+    padding: 0.78125em;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 0.625em;
+    &::before {
+        position: absolute;
+        color: $dark;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }    
+}
+
+.tel {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    // font-size: 16px;
+    @include adaptive-font(16, 10);
+    letter-spacing: 0.05em;
+    color: $acent;
+}

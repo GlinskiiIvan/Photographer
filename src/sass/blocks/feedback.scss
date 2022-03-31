@@ -3,10 +3,13 @@
     background: url('../img/form_bg.png');
     background-repeat: no-repeat !important;
     background-position: center !important;
-    background-size: cover !important;    
+    background-size: cover !important;  
+    @include MobileL-425 {
+        padding: $section-padding-mobile;
+    }  
     &__title {
         font-weight: 700;
-        font-size: 25px;
+        @include adaptive-font(25, 20);
         text-align: center;
         letter-spacing: 0.05em;
         color: $white;
@@ -33,7 +36,7 @@
             border: none;   
             outline: none;   
             font-weight: 700;
-            font-size: 26px;
+            @include adaptive-font(26, 20);
             text-align: center;
             letter-spacing: 0.05em;    
             background-color: $acent;     
